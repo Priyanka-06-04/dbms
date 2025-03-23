@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+   <div >
+    <h1>SELF JOIN</h1>
+  <P>The Self join is mainly preferred to join a table with itself. Thus means that each row of the table is combined with itself and with every other row of the table The self join can be viewed as a join of two copies of the same table. The table is not actually copied, but SQL performs the command as though it were.
+    <br>
+
+    The syntax of the command for joining a table to itself is almost the same as that for joining two different tables. To distinguish the column names from one another, aliases for the actual table name are used, since both the tables have the same name. Table name aliases are defined in the FROM clause of the query.</P>  
+   <p><span>EXAMPLE:</span></p> 
+   <DIV class="eg">
+    <table>
+        <tr>
+            <th>EMPNO</th>
+            <th>ENAME</th>
+            <th>DEPTNO</th>
+            <th>MGR</th>
+            
+        </tr>
+        <tr>
+            <td>7369</td>
+            <td>SMITH</td>
+            <td>20</td>
+            <td>7982</td>
+        </tr>
+        <tr>
+            <td>7499</td>
+            <td>ALLEN</td>
+            <td>30</td>
+            <td>7698</td>
+          
+        </tr>
+        <tr>
+            <td>7521</td>
+            <td>WARD</td>
+            <td>30</td>
+            <td>7698</td>
+        
+        </tr>
+        <tr>
+            <td>7566</td>
+            <td>JONES</td>
+            <td>20</td>
+            <td>7839</td>
+          
+        </tr>
+        <tr>
+            <td>7654</td>
+            <td>MARTIN</td>
+            <td>30</td>
+            <TD>7698</TD>
+        </tr>
+        <tr>
+            <td>7654</td>
+            <td>MARTIN</td>
+            <td>30</td>
+            <TD>7698</TD>
+        </tr>
+        <tr>
+            <td>7698</td>
+            <td>BLAKE</td>
+            <td>30</td>
+            <TD>7839</TD>
+        </tr>
+        <tr>
+            <td>7782</td>
+            <td>CLARK</td>
+            <td>10</td>
+            <TD>7839</TD>
+        </tr>
+        <tr>
+            <td>7788</td>
+            <td>SCOTT</td>
+            <td>20</td>
+            <TD>7566</TD>
+        </tr>
+         <tr>
+            <td>7839</td>
+            <td>KING</td>
+            <td>10</td>
+            <TD></TD>
+            <tr>
+                <td>7844</td>
+                <td>TURNER</td>
+                <td>30</td>
+                <TD>7698</TD>
+            </tr>
+            <tr>
+                <td>7876</td>
+                <td>ADAMS</td>
+                <td>20</td>
+                <TD>7788</TD>
+            </tr>
+            <tr>
+                <td>7900</td>
+                <td>JAMES</td>
+                <td>30</td>
+                <TD>7698</TD>
+            </tr>
+            <tr>
+                <td>7902</td>
+                <td>FORD</td>
+                <td>20</td>
+                <TD>7566</TD>
+            </tr><tr>
+                <td>7934</td>
+                <td>MILLER</td>
+                <td>10</td>
+                <TD>7782</TD>
+            </tr>
+        </tr>
+    </table>
+<br>
+    Consider the "EMP" table. Primary key of the "EMP" table is EMPNO. Details of ach employee's manager are just another row in EMP table whose EMPNO 
+
+is stored in MGR column of some other row. Therefore MGR is a foreign key that refernces EMPNO. TO list out the names of the of the manager with the employee record, one will have to join "EMP" table with itself.<br>
+<br>
+<b>Example:</b>
+    <PRE class="eg">
+     SELECT WORKER.ENAME AS ENAME,
+     MANAGER.ENAME AS MANAGER
+     FROM EMP WORKER, EMP MANAGER
+     WHERE WORKER.MGR = MANAGER.EMPNO;
+        </PRE>
+        OUTPUT:
+        <table>
+            <tr>
+               
+                <th>ENAME</th>
+                <th>MANAGER</th>
+                
+            </tr>
+            <tr>
+                <td>SCOTT </td>
+                <td>JONES</td>
+              
+            </tr>
+            <tr>
+                <td>FORD</td>
+                <td>JONES</td>
+            </tr>
+            <tr>
+                <td>ALLEN</td>
+                <td>BLAKE</td>
+                
+            </tr>
+            <tr>
+                <td>WARD</td>
+                <td>BLAKE</td>
+                
+            </tr>
+            <tr>
+                <td>JAMES</td>
+                <td>BLAKE</td>
+              
+               
+            </tr>
+            <tr>
+                <td>TURNER</td>
+                <td>BLAKE</td>
+              
+               
+            </tr>
+            <tr>
+                <td>MARTIN</td>
+                <td>BLAKE</td>
+              
+               
+            </tr>
+            <tr>
+                <td>MILLER</td>
+                <td>CLARK</td>
+              
+               
+            </tr>
+            <tr>
+                <td>ADAMS</td>
+                <td>SCOTT</td>
+              
+               
+            </tr>
+            <tr>
+                <td>JONES</td>
+                <td>KING</td>
+              
+               
+            </tr>
+            <tr>
+                <td>CLARK</td>
+                <td>KING</td>
+              
+               
+            </tr>
+            <tr>
+                <td>BLAKE</td>
+                <td>KING</td>
+              
+               
+            </tr>
+            <tr>
+                <td>SMITH</td>
+                <td>FORD</td>
+              
+               
+            </tr>
+        </table>
+
+    </div>
+    
+   </div> 
+</body>
+</html>

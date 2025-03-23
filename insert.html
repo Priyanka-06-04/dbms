@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body><div>
+    <h1>SQL INSERT STATEMENT</h1>
+      <p> SQL INSERT statement is a SQL query. It is used to insert a single or a multiple records in a table.
+        <br>
+        There are two ways to insert data in a table:</p>
+    <br>1.By SQL insert into statement<br>
+         I.  By specifying column names<br>
+         II. Without specifying column names<br>
+        2.By SQL insert into select statement<br>
+       <p>1.Inserting data directly into a table<br><br>
+            You can insert a row in the table by using SQL INSERT INTO command.
+            <br><br>
+            There are two ways to insert values in a table.
+            <br><br>
+            In the first method there is no need to specify the column name where the data will be inserted, you need only their values.
+            <br>
+            <h2>Syntax</h2>
+    <pre>INSERT INTO table_name  
+        VALUES (value1, value2, value3....);
+              </pre>
+            The second method specifies both the column name and values which you want to insert.
+    <pre>
+    INSERT INTO table_name (column1, column2, column3....)  
+    VALUES (value1, value2, value3.....);
+              </pre></p>
+            Let's take an example of table which has five records within it.
+<br>
+<pre class="eg">
+    INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY)  
+    VALUES (1, ABHIRAM, 22, ALLAHABAD);  
+    INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY)  
+    VALUES (2, ALKA, 20, GHAZIABAD);  
+    INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY)  
+    VALUES (3, DISHA, 21, VARANASI);  
+    INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY)  
+    VALUES (4, ESHA, 21, DELHI);  
+    INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY)  
+    VALUES (5, MANMEET, 23, JALANDHAR);  </pre><br>
+    
+           It will show the following table as the final result. <br>
+            <table border="2px">
+                <th>ROLL_NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <tr>
+                <td>1</td>
+                <td>ABHIRAM</td>
+                <td>22</td>
+                <td>ALLAHABAD</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>ALKA</td>
+                <td>20</td>
+                <td>GHAZIABAD</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>DISHA</td>
+                <td>21</td>
+                <td>VARANASI</td>
+            </tr>
+ <tr>
+    <td>4</td>
+    <td>ESHA</td>
+    <td>21</td>
+    <td>DELHI</td>
+ </tr>
+ <TR>
+    <TD>5</TD>
+    <td>MANMEET</td>
+    <TD>23</TD>
+    <TD>JALANDHAR</TD>
+ </TR>
+            </table>
+            <p>You can create a record in CUSTOMERS table by using this syntax also.</p>
+            <DIV class="eg">
+                INSERT INTO CUSTOMERS  <br> 
+                VALUES (6, PRATIK, 24, KANPUR);  
+            </DIV><br><br>
+            <table border="2px">
+                <th>ROLL_NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <tr>
+                <td>1</td>
+                <td>ABHIRAM</td>
+                <td>22</td>
+                <td>ALLAHABAD</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>ALKA</td>
+                <td>20</td>
+                <td>GHAZIABAD</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>DISHA</td>
+                <td>21</td>
+                <td>VARANASI</td>
+            </tr>
+ <tr>
+    <td>4</td>
+    <td>ESHA</td>
+    <td>21</td>
+    <td>DELHI</td>
+ </tr>
+ <TR>
+    <TD>5</TD>
+    <td>MANMEET</td>
+    <TD>23</TD>
+    <TD>JALANDHAR</TD>
+ </TR>
+ <TR>
+    <TD>6</TD>
+    <TD>PARTEEK</TD>
+    <TD>24</TD>
+    <TD>KANPUR</TD>
+ </TR>
+            </table>
+           <H2> 2. Inserting data through SELECT Statement</H2>
+           <pre>SQL INSERT INTO SELECT Syntax
+
+           INSERT INTO table_name  
+           [(column1, column2, .... column)]  
+           SELECT column1, column2, .... Column N  
+           FROM table_name [WHERE condition]
+        </pre></div>
+</body>
+</html>

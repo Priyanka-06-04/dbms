@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>Ordering the result of query</h1>
+        <p>The order of rows retured in a query result is undefined.SQL uses he ORDER BY clause to impose an order on the result of a query.The ORDER BY keyword is used to sort the result-set in ascending or descending order. Oracle sorts query results in ascending order by default.</p>
+        <h3>Syntax</h3>
+        <pre>
+            SELECT column1, column2, ...
+            FROM table_name
+            ORDER BY column1, column2, ... ASC|DESC;
+        </pre>
+        <H3>Example</H3>
+        <div class="eg">
+            (if you want to sort the student table by marks of student of the table,the query would be like:)
+            SELECT Roll_NO,NAME,MARKS FROM STUDENT<BR>
+            ORDER BY MARKS;
+            <table border="2px">
+                <th>ROLL_NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Marks</th>
+                <tr>
+                <tr>
+                        <td>3</td>
+                        <td>DISHA</td>
+                        <td>21</td>
+                        <td>VARANASI</td>
+                        <td>34</td>
+                 </tr>
+                 <tr>
+                    <td>2</td>
+                    <td>ALKA</td>
+                    <td>20</td>
+                    <td>GHAZIABAD</td>
+                    <td>43</td>
+                </tr>
+                <TR>
+                    <TD>5</TD>
+                    <td>MANMEET</td>
+                    <TD>22</TD>
+                    <TD>JALANDHAR</TD>
+                    <td>43</td>
+                    </TR>
+                <td>1</td>
+                <td>ABHIRAM</td>
+                <td>22</td>
+                <td>ALLAHABAD</td>
+                <td>45</td>
+                </tr>        
+    <tr>
+    <td>4</td>
+    <td>ESHA</td>
+    <td>21</td>
+    <td>DELHI</td>
+    <td>45</td>
+    </tr>
+            </table>
+           <H3> DESC</H3>
+           <P> The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.</P>
+            
+            <H3>Example</H3>
+ <div class="eg">
+SELECT Roll_NO,NAME,MARKS FROM STUDENT<BR>
+ORDER BY MARKS DESC;
+<table border="2px">
+    <th>ROLL_NO</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Marks</th>
+    <tr>
+    <td>1</td>
+    <td>ABHIRAM</td>
+    <td>22</td>
+    <td>ALLAHABAD</td>
+    <td>45</td>
+    </tr>  <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        <td>45</td>
+        </tr>
+    <TR>
+        <TD>5</TD>
+        <td>MANMEET</td>
+        <TD>22</TD>
+        <TD>JALANDHAR</TD>
+        <td>43</td>
+        </TR>      
+
+<tr>
+<td>2</td>
+<td>ALKA</td>
+<td>20</td>
+<td>GHAZIABAD</td>
+<td>43</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DISHA</td>
+<td>21</td>
+<td>VARANASI</td>
+<td>34</td>
+</tr>
+</table>
+</div>
+</div>                
+    </div>
+</body>
+</html>

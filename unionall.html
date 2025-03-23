@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>UNION ALL</h1>
+        <p>The UNION ALL operator joins the outputs of two or more queries (SELECT Statements) into a single set of rows and columns without the removal of any duplicates.
+
+        </p>
+        <p><span>SYNTAX</span></p>
+        <PRE class="eg">
+            SELECT Column_list from Table1
+            UNION ALL
+            SELECT Column_list from Table2
+            [ORDER BY CLAUSE];
+        </PRE>
+        <p><SPAN>EXAMPLE:</SPAN></p>
+        <div class="eg">
+            Consider the following table 'EMP':
+            <BR></BR>
+            <table class="table"border="2px">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>ENAME</th>
+                    <th>JOB</th>
+                    
+                </tr>
+                <TR>
+                    <TD>10</TD>
+                    <TD>CLARK</TD>
+                    <TD>MANAGER</TD>
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>SMITH</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>JONES</TD>
+                    <TD>MANAGER</TD>
+               
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>ALLEN</TD>
+                    <TD>SALESMAN</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>JAMES</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+
+                </table>
+               To display the different designations in department 20 and 30 of 'EMP' table without removing any duplicate values:
+               <pre class="eg">
+SELECT JOB FROM EMP
+WHERE DEPTNO = 20
+UNION ALL
+SELECT JOB FROM EMP
+WHERE DEPTNO = 30;
+               </pre>
+               OUTPUT:
+               <br>
+               <BR>
+                <TABLE border="2px">
+                    <TR>  <TH>JOB</TH></TR>
+                  
+                  <TR>
+                    <TD>MANAGER</TD>
+                  </TR>
+                  <TR>
+                    <TD>CLERK</TD>
+                  </TR>
+                  <TR>
+                    <TD>SALESMAN</TD>
+                  </TR>
+                  <TR>
+                    <TD>CLERK</TD>
+                  </TR>
+                </TABLE>
+        </div>
+       
+    </div>
+</body>
+</html>

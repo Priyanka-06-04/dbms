@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ROW-LEVEL TRIGGER</h1>
+        <p>A row-level trigger is fired each time the table is affected by the triggering statement
+        it is fired once for each row that is affected by the triggering statement.<br><br>
+        no rows, a row trigger is not executed at all.<br>
+        Rows aveN riggers are useful if the code in the triger actin degende nat pos using the option FOR EACH ROW in CREATE TRIGGER statement.
+        by the wigering statement or rows that are affeed Co stave regens are implement</p>
+     <b>Syntax for a Row-level trigger is:</b>
+      <pre class="syt"> 
+        CREATE OR REPLACE TRIGGER < trigger_name >
+        ‹BEFORE | AFTER> ‹ACTION> OR < ACTION> OR < ACTION >
+        [OF ‹column_name_list>]
+        ON < table_name >
+        FOR EACH ROW
+        DECLARE
+        ‹variable definitions>
+        BEGIN
+        < trigger_code>
+        EXCEPTION
+        ‹ exception clauses > END < trigger_name>;</pre>
+        Where, trigger name is the name of the trigger to create.<br>
+       <b> Example:</b>
+        <pre class="eg">
+        SQL> CREATE OR REPLACE TRIGGER ROW LEVEL
+        BEFORE UPDATE ON DEPT
+        FOR EACH ROW
+        DECLARE
+        MSG VARCHAR2(30):='ROW-LEUEL TRIGGER FIRED' ;
+        BEGIN
+        DBMS_OUTPUT-PUT_LINE (MSG) ;
+        END :
+        /
+        Trigger created.
+        SQL> UPDATE DEPT
+        SET LOC=' USA'
+        WHERE DAME= 'FINANCE' ;
+        ROW-LEUEL TRIGGER FIRED ROW-LEVEL TRIGGER FIRED
+        2 rows updated</pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <DIV>
+        <h1>CREATE OR REPLACE VIEW </h1>
+        <b>Updating a View</b><br>
+       <p> A view can be updated with the CREATE OR REPLACE VIEW statement.
+        <br>The OR REPLACE Option allows a view to be created even if one exists with this name already, thus replacing the old version of the view for its owner. This means that the view can be altered without dropping, recreating and regranting object privileges.
+    </p>
+       <h3>Syntax:</h3>
+       <pre> 
+        CREATE OR REPLACE VIEW view_name AS
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition;</pre><br>
+        The following SQL adds the section column to the v1 view:
+        <br>
+        Example:<br>
+        <pre class="eg">
+        CREATE OR REPLACE VIEW v1
+         AS
+        SELECT *
+        FROM student
+        WHERE section="A";</pre>
+      
+</body>
+</html>

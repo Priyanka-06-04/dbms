@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conditional Control</h1>
+        <p>The Structure of PL/SQL IF statement is similar to the Structure of IF statements in other procedural languages. It allows PL/SQL to perform actions selectively based on conditions.</p>
+        There are three forms of IF statement:
+        <ul>
+            <li>IF-THEN-ENDIF</li>
+            <li>IF-THEN-ELSE-ENDIF</li>
+            <li>IF-THEN-ELSIF-ENDIF</li>
+        </ul>
+        <h3>(i) IF-THEN-ENDIF</h3>
+        Syntax:
+        <pre class="syt">
+            IF condition   
+            THEN   
+            Statement: {It is executed when condition is true}  
+            END IF; 
+        </pre>
+        This syntax is used when you want to execute statements only when condition is TRUE.
+        <br>
+        <h3>Example:</h3>
+<pre CLASS="eg"> 
+    DECLARE  
+    a number(3) := 500;  
+    BEGIN  
+    -- check the boolean condition using if statement   
+    IF( a &lt; 20 ) THEN  
+       -- if condition is true then print the following    
+       dbms_output.put_line('a is less than 20 ' );  
+    ELSE  
+       dbms_output.put_line('a is not less than 20 ' );  
+    END IF;  
+    dbms_output.put_line('value of a is : ' || a);  
+    END;
+           </pre>
+        <h3>(ii)IF-THEN-ELSE-ENDIF </h3>
+        Syntax:
+ <pre class="syt">
+    IF condition   
+    THEN   
+    Statement: 
+    {It is executed when condition is true}  
+    ELSE 
+     statements;
+    END IF; 
+            
+       
+        <h3>(iii)IF-THEN-ELSIF-ENDIF </h3>
+        Syntax:
+<pre class="syt">
+    IF condition1   
+    THEN  
+    {...statements to execute when condition1 is TRUE...}  
+    ELSIF condition2   
+    THEN  
+    {...statements to execute when condition2 is TRUE...}  
+    ELSE  
+     {...statements to execute when both condition1 and condition2 are FALSE...}  
+    END IF; 
+            
+        </pre>
+    </div>
+</body>
+</html>

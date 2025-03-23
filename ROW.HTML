@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type and rowtype</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h2>%TYPE</h2>
+        <p>To avoid and size conflict between a variable and the column of a table, the attribute %TYPE is used. Advantages of this method of defining a variable is that,whenever the type and/or size of a column in the table are changed, it is automatically reflected in the variable declaration.</p>
+        <h3>Example:</h3>
+        <div class="eg"> Temp_name Emp_ename %type;
+             <br>Here, the variable Temp_name will be of the same size and type as that of the Emp_ename column of EMP table.
+        </div>
+        <h2>%ROWTYPE</h2>
+        <p>The %ROWTYPE attribute provides a record type that represents a row in a database table. The record can store ann entire row of data selected from table or fetched from a cursur or cursur variable.In case, variable for the entire row of a table need to be declared, then instead of declaring them individually, the attribute %ROWTYPE is used</p>
+        <h3>Example:</h3>
+        <div class="eg">Emp_row  Emp%rowtype;
+             <br>Here, the variable Emp_row will be of  Composite variable, consisting of the column names of the table as its members.To refer to a specific variable,the following syntax will be used:
+             <br><br>
+             Emp_row.Sal:=5000;
+        </div>
+    </div>
+</body>
+</html>

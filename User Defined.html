@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-defined</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User-defined Exception</h1>
+        <p>In addition to the predefined exceptions, you can also define your own exceptions.
+            Unlike predefined exceptions, user-defined exceptions are declared and defined by the user.
+            User-defined exceptions are declared in the declaration section of PL./SQL block with their type as EXCEPTION. They must be raised explicitly using the RAISE statement, unlike predefined exceptions that are raised implicitly.<br><br>
+             Steps to be followed to use User-defined Exceptions:<br>
+            (i) They should be explicitly declared in the Declaration section.<br>
+            (Declaring an Exception)<br>
+            (i) They should be explicitly raised in the Execution section.<br>
+            (Raising an Exception)<br>
+            (iii) They should be handled by referencing the user-defined exception name in the
+            Exception section.<br>
+            (Hanaling an Exception)</p>
+            <h3>Syntax</h3>
+            <pre class="syt">
+                BEGIN
+                - - - - - 
+                - - - - -
+                 EXCEPTION
+                 WHEN < exception-identifier› THEN
+                < statements>;
+                 END;
+            </pre>
+    </div>
+</body>
+</html>

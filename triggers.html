@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>INTRODUCTION</h1>
+        <p>Triggers in SQL Server
+            A trigger is a set of SQL statements that reside in system memory with unique names. It is a specialized category of stored procedure that is called automatically when a database server event occurs. Each trigger is always associated with a table.
+            <br><br>
+            A trigger is called a special procedure because it cannot be called directly like a stored procedure. The key distinction between the trigger and procedure is that a trigger is called automatically when a data modification event occurs against a table. A stored procedure, on the other hand, must be invoked directly.
+            <br><br>
+            
+            The following are the main characteristics that distinguish triggers from stored procedures:
+            <br><br>
+            
+           * We cannot manually execute/invoked triggers.
+           * Triggers have no chance of receiving parameters.
+           * A transaction cannot be committed or rolled back inside         trigger.
+            <h3>Syntax of Trigger</h3>
+            We can create a trigger in SQL Server by using the CREATE TRIGGER statement as follows:
+             <pre class="syt"> 
+                CREATE [OR REPLACE] TRIGGER trigger_name
+                BEFORE IAFTER |INSTEAD OF
+                INSERT [OR] | UPDATE [OR] | DELETE [OF col_name]
+                ON table_name
+                (Triggering
+                Event)
+                [REFERENCING [OLD[AS] <old>]NEW [AS] <new>]
+                [FOR EACH ROW [WHEN <condition>]]
+                    (Trigger
+                    Restricion)
+                BEGIN
+                **** PL/SQL BLOCK 
+                END;
+                (Trigger action)
+            </pre> 
+            </p>
+    </div>
+</body>
+</html>

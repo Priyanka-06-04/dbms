@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTER</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body><DIV>
+    <h1>
+        SQL ALTER TABLE Statement
+    </h1>
+    <p>
+        The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+<br>
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+    </p>
+    <h2>
+        ALTER TABLE - ADD Column
+    </h2>
+    <h2>Syntax</h2>
+    <pre>
+        ALTER TABLE table_name
+        ADD column_name datatype;
+    </pre>
+    <p>The following SQL adds an "Email" column to the "Customers" table:      </p>
+    <h2>Example</h2>
+    <div class="eg">
+        <pre>
+            ALTER TABLE Customers
+            ADD Email varchar(255);
+        </pre>
+        </div>
+        <h2>ALTER TABLE - DROP COLUMN</h2>
+        <p>To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):</p>
+        <pre>ALTER TABLE table_name
+            DROP COLUMN column_name;   
+        </pre>
+        <p>The following SQL deletes the "Email" column from the "Customers" table:</p>
+        <div class="eg">
+            <pre>
+                ALTER TABLE Customers
+                DROP COLUMN Email;
+            </pre>
+        </div>
+        <h2>
+            ALTER TABLE -ALTER/MODIFY DATATYPE
+        </h2>
+       <p>To change the data type of a column in a table, use the following syntax:</p>
+       <pre>
+        ALTER TABLE table_name
+        MODIFY COLUMN column_name datatype;
+       </pre>
+        
+    </div></DIV>
+</body>
+</html>

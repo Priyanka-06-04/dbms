@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>UNION</h1>
+        <p>The UNION operator joins the outputs of two or more queries (SELECT statements) into single set of rows and columns having distinct records.
+
+        </p>
+        <p><span>SYNTAX</span></p>
+        <PRE CLASS="SYT">
+            SELECT Column_list from Table1
+            UNION
+            SELECT Column_list from Table2
+            [ORDER BY CLAUSE];
+        </PRE>
+        <div class="eg"border="2px">
+            Consider the following table 'EMP':
+            <br>
+            <table class="table">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>ENAME</th>
+                    <th>JOB</th>
+                    
+                </tr>
+                <TR>
+                    <TD>10</TD>
+                    <TD>CLARK</TD>
+                    <TD>MANAGER</TD>
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>SMITH</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>JONES</TD>
+                    <TD>MANAGER</TD>
+               
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>ALLEN</TD>
+                    <TD>SALESMAN</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>JAMES</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+
+                </table>
+               To display the different designations in department 20 and 30 of 'EMP' table:
+               <pre class="eg">
+  SELECT JOB FROM EMP
+  WHERE DEPTNO = 20
+  UNION
+  SELECT JOB FROM EMP
+  WHERE DEPTNO = 30;
+               </pre>
+               OUTPUT:
+               <br>
+               <BR>
+                <TABLE border="2px">
+                    <TR>  <TH>JOB</TH></TR>
+                  <TR>
+                    <TD>CLERK</TD>
+                  </TR>
+                  <TR>
+                    <TD>MANAGER</TD>
+                  </TR>
+                  <TR>
+                    <TD>SALESMAN</TD>
+                  </TR>
+                </TABLE>
+        </div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>
+            NESTED QUERY
+        </h1>
+        <P>
+            Nested query is a query within another query. SQL has an ability to nest queries within ne another. A subquery is a SELECT statement that is nested within another SELECT atement and which returns intermediate results. The result of subquery or inner query is ynamically substituted in the condition of outer query. SQL first evaluates the inner query r subquery within the WHERE clause. The result of inner query is then substituted in the ondition of the outer query.<BR>
+
+           Most of the time, a subquery is used when you know how to search for a value using a SELECT statement, but do not know the exact value.
+        </P>
+        <H3>Example:</H3>
+        <table>
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>DEPTNO</th>
+                <th>MGR</th>
+                
+            </tr>
+            <tr>
+                <td>7369</td>
+                <td>SMITH</td>
+                <td>20</td>
+                <td>7982</td>
+            </tr>
+            <tr>
+                <td>7499</td>
+                <td>ALLEN</td>
+                <td>30</td>
+                <td>7698</td>
+              
+            </tr>
+            <tr>
+                <td>7521</td>
+                <td>WARD</td>
+                <td>30</td>
+                <td>7698</td>
+            
+            </tr>
+            <tr>
+                <td>7566</td>
+                <td>JONES</td>
+                <td>20</td>
+                <td>7839</td>
+              
+            </tr>
+            <tr>
+                <td>7654</td>
+                <td>MARTIN</td>
+                <td>30</td>
+                <TD>7698</TD>
+            </tr>
+            <tr>
+                <td>7654</td>
+                <td>MARTIN</td>
+                <td>30</td>
+                <TD>7698</TD>
+            </tr>
+            <tr>
+                <td>7698</td>
+                <td>BLAKE</td>
+                <td>30</td>
+                <TD>7839</TD>
+            </tr>
+            <tr>
+                <td>7782</td>
+                <td>CLARK</td>
+                <td>10</td>
+                <TD>7839</TD>
+            </tr>
+            <tr>
+                <td>7788</td>
+                <td>SCOTT</td>
+                <td>20</td>
+                <TD>7566</TD>
+            </tr>
+             <tr>
+                <td>7839</td>
+                <td>KING</td>
+                <td>10</td>
+                <TD></TD>
+                <tr>
+                    <td>7844</td>
+                    <td>TURNER</td>
+                    <td>30</td>
+                    <TD>7698</TD>
+                </tr>
+                <tr>
+                    <td>7876</td>
+                    <td>ADAMS</td>
+                    <td>20</td>
+                    <TD>7788</TD>
+                </tr>
+                <tr>
+                    <td>7900</td>
+                    <td>JAMES</td>
+                    <td>30</td>
+                    <TD>7698</TD>
+                </tr>
+                <tr>
+                    <td>7902</td>
+                    <td>FORD</td>
+                    <td>20</td>
+                    <TD>7566</TD>
+                </tr><tr>
+                    <td>7934</td>
+                    <td>MILLER</td>
+                    <td>10</td>
+                    <TD>7782</TD>
+                </tr>
+            </tr>
+        </table>
+       <i>List the employees belonging to the department of MILLER from "EMP" table.<br></i>
+        Here, we do not know the department to which MILLER belongs. So, we have to determine the department of MILLER first and then use that department number to find out the other employees of that department.
+        <pre class="eg">
+        SELECT DEPTNO FROM EMP
+        WHERE ENAME = 'MILLER' ; 
+        </pre>
+        <b>OUTPUT:</b>
+        <TABLE>
+            <TH>DEPTNO</TH>
+            <TR>
+                <TD>10</TD>
+            </TR>
+        </TABLE>
+        <P>
+            After finding the department number of MILLER, the next query to find out the other employees of that department will be:
+        </P>
+        <pre class="eg">
+            SELECT ENAME FROM EMP
+            WHERE DEPTNO = 10;
+        </pre>
+        <b>OUPUT:</b>
+        <TABLE>
+            <TH>ENAME</TH>
+            <TR>
+                <TD>CLARK</TD>
+                <TD>KING</TD>
+                <TD>MILLER</TD>
+            </TR>
+        </TABLE>
+        Now, combining the above two queries:
+        <PRE CLASS="EG">
+            SELECT ENAME FROM EMP
+            WHERE DEPTNO = 
+            (SELECT DEPTNO FROM EMP WHERE ENAME = 'MILLER'):
+        </PRE>
+        <B>Output:</B>
+        <TABLE>
+            <TH>ENAME</TH>
+            <TR>
+                <TD>CLARK</TD>
+                <TD>KING</TD>
+                <TD>MILLER</TD>
+            </TR>
+        </TABLE>       
+    </div>
+</body>
+</html>

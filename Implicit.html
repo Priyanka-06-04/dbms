@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Implicit Cursor</h1>
+        <p>
+            Implicit Cursors are declared by PL/SQL implicitly when DML statements like, INSERT,UPDATE, and DELETE statements are executed. They are also declared when a SELECT
+            statement that returns just one row is executed.<br>
+            When the executable part of a PL/SQL block issues a SQL statement, PL/SQL creates an implicit cursor, which PL/SQL manages automatically.<br>
+            <h2>IMPLICIT CURSOR ATTRIBUTES</h2>
+            <p>Oracle provides few attributes for implicit cursor called as implicit cursor attributes to check the status of DML operations.</p>
+            These attributes are:<br>
+            (i) %FOUND <br>
+            (ii) %NOTFOUND<br>
+            (iii) %ROWCOUNT<br>
+            (iv) %ISOPEN<br>
+            <p>
+            When we execute INSERT, UPDATE, or DELETE statements the cursor attributes tell us whether any rows are affected and how many have been affected. When a SELECT... INTO statement is executed in a PL/SQL Block, implicit cursor attributes can be used to find out whether any row has been returned by the SELECT statement. PL/SQL returns an error when no data is selected.</p>
+           <h3>Example:</h3>
+           <pre class="eg">
+            DECLARE
+            VAR_ROWS NUMBER (5) ;
+            BEGIN
+            UPDATE EMP
+            SET SAL = SAL + 1000;
+            IF SQL%NOTFOUND THEN
+            DEMS_OUTPUT. PUT_LINE 
+            ( 'NONE OF THE SALARIES WERE UPDATED') :
+            ELSIF SQL%FOUND THEN
+            VAR_ROWS: = SQL*ROWCOUNT;
+            DBMS_OUTPUT. PUT_LINE 
+            (VAR_ROWS|| 'RECORDS ARE UPDATED.'):
+            END IF;
+            END;
+            /
+       <i> On execution, the above code will return:</i>
+             14 RECORDS ARE UPDATED.
+        PL/SQL procedure successfully completed.
+           </pre>
+        </p>
+    </div>
+</body>
+</html>

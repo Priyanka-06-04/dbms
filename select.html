@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+      <div>
+        <H1>SELECT STATEMENT </H1>
+        <p>The most commonly used SQL command is SELECT statement.The SELECT statement is used to query or retrive data from a table in a database.A query may retrive information from specified columns or from all of the columns in the table.<br><br>
+        To create a simple SELECT statement,you must specify the columns name and the table name.The whole query is called SQL SELECT statement. </p>
+        <h3>Syntax</h3>
+        <pre>SELECT column1, column2, ...
+            FROM table_name
+            [where clause] 
+            [GROUP BY clause] 
+            [HAVING clause] 
+            [ORDER BY clause] ;
+            </pre>
+            <H4>Example</H4>
+            <table border="2px">
+                <th>ROLL_NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <tr>
+                <td>1</td>
+                <td>PARAM</td>
+                <td>22</td>
+                <td>ALLAHABAD</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>ALKA</td>
+                <td>20</td>
+                <td>GHAZIABAD</td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>DISHA</td>
+                <td>21</td>
+                <td>VARANASI</td>
+            </tr> 
+            <tr>
+            <td>4</td>
+            <td>ESHA</td>
+            <td>21</td>
+            <td>DELHI</td>
+            </tr>
+            <TR>
+            <TD>5</TD>
+            <td>MANMEET</td>
+            <TD>23</TD>
+            <TD>JALANDHAR</TD>
+            </TR>
+            </table><BR><BR>
+            <div class="eg">
+            1>To select the name of all the students,
+            <br>
+              SELECT NAME FROM STUDENT;
+              <table border="2px">
+                
+                <th>Name</th>
+                
+                <tr>
+                
+                <td>PARAM</td>
+              
+                </tr>
+                <tr>
+               
+                <td>ALKA</td>
+                
+            </tr>
+             <tr>
+               
+                <td>DISHA</td>
+                
+            </tr> 
+            <tr>
+            
+            <td>ESHA</td>
+            
+            </tr>
+            <TR>
+            
+            <td>MANMEET</td>
+            
+            </TR>
+            </table>
+            <BR><br>
+            2>To select the all the columns from students,
+            <br>
+              SELECT * FROM STUDENT;<br><br>
+              3>To select the more than one columns from students,
+            <br>
+              SELECT ROLL_NO,NAME FROM STUDENT;
+            </div>
+      </div> 
+</body>
+</html>

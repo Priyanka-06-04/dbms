@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>INTERSECT</h1>
+        <p>The INTERSECT operator returns the rows that are common between two sets of rows. INTERSECT operator, like UNION operator, removes all duplicated rows from the result set.
+
+        </p>
+        <p><span>SYNTAX</span></p>
+        <PRE class="syt">
+SELECT Column_list from Table1
+INTERSECT
+SELECT Column_list from Table2
+[ORDER BY CLAUSE];
+        </PRE>
+        <div class="eg">
+            Consider the following table 'EMP':
+            <br>
+            <table class="table"border="2px">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>ENAME</th>
+                    <th>JOB</th>
+                    
+                </tr>
+                <TR>
+                    <TD>10</TD>
+                    <TD>CLARK</TD>
+                    <TD>MANAGER</TD>
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>SMITH</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>20</TD>
+                    <TD>JONES</TD>
+                    <TD>MANAGER</TD>
+               
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>ALLEN</TD>
+                    <TD>SALESMAN</TD>
+                    
+                </TR>
+                <TR>
+                    <TD>30</TD>
+                    <TD>JAMES</TD>
+                    <TD>CLERK</TD>
+                    
+                </TR>
+
+                </table>
+               To display the jobs common in department 20 and 30 of 'EMP' table:
+               <pre class="eg">
+SELECT JOB FROM EMP
+WHERE DEPTNO = 20
+INTERSECT
+SELECT JOB FROM EMP
+WHERE DEPTNO = 30;
+               </pre>
+               OUTPUT:
+               <br>
+               <BR>
+                <TABLE border="2px">
+                    <TR>  <TH>JOB</TH></TR>
+                  <TR>
+                    <TD>CLERK</TD>
+                  </TR>
+                  
+                </TABLE>
+        </div>
+       
+    </div>
+</body>
+</html>

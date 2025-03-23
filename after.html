@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After </title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>After Trigger</h1>
+        <p>
+            AFTER triggers are fired after the triggering action is completed. For example, if AFTER trigger is associated with INSERT command then it is fired after the row is inserted into the table.
+        </p>
+        <b>Types of After triger:
+        </b>
+        *<b>AFTER INSERT trigger:</b> An AFTER INSERT trigger means that Oracle will fire this trigger after the INSERT operation is executed.
+        <h3>Syntax for an AFTER INSERT trigger is:</h3>
+        <pre class="syt">
+        CREATE or REPLACE TRIGGER trigger_name
+        AFTER INSERT
+        ON table_name
+        [ FOR EACH ROW ]
+        DECLARE
+        -- variable declarations
+        BEGIN
+        -- trigger code
+        EXCEPTION
+        WHEN * * *
+        -- exception handling
+        END;</pre>
+        Where, trigger_name is the name of the trigger to create.
+        <h3>Example:</h3>
+        <pre class="eg">
+            CREATE TABLE EMP_CC
+            (
+            empno number (4) primary key, 
+            ename varchar2(10), 
+            job varchar2(9), 
+            mgr number (4),
+            hiredate date,
+            sal number (7,2),
+            comm number (7,2),
+            deptno number (2)
+            ) ;
+            Table created.  
+        </pre>
+        
+    </div>
+</body>
+</html>

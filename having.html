@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div><h1>HAVING Clause in SQL</h1>
+        The HAVING clause places the condition in the groups defined by the GROUP BY clause in the SELECT statement.
+        <br>
+        This SQL clause is implemented after the 'GROUP BY' clause in the 'SELECT' statement.
+        <br>
+        This clause is used in SQL because we cannot use the WHERE clause with the SQL aggregate functions. Both WHERE and HAVING clauses are used for filtering the records in SQL queries
+    <h3>Syntax</h3>
+<pre>
+    SELECT column_Name1, column_Name2, ....., column_NameN aggregate_function_name(column_Name) FROM table_name 
+    <BR>GROUP BY column_Name1
+    <BR> HAVING condition;
+</pre>
+<div class="eg">
+    (if you want to know the total marks held by same age group more than 60,the query would be like:)<br>
+    <br>
+    SELECT AGE,SUM(MARKS) AS TOTAL_MARKS FROM STUDENT<BR>
+    GROUP BY AGE<BR>
+    HAVING SUM(MARKS)>60;
+<BR>
+    <TABLE BORDER="2PX">
+        <TH>AGE</TH>
+        <TH>TOTAL_MARKS</TH>
+        
+        <TR>
+            <TD>21</TD>
+            <TD>79</TD>
+        </TR> 
+        <TR>
+            <TD>22</TD>
+            <TD>88</TD>
+        </TR></div>
+</body>
+</html>

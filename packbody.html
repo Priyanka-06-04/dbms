@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>body</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Package Body</h1>
+        <p>
+            A package body contains the code that implements the package specification. It fully defines cursors, procedures and functions declared in the package specification. Unlike a package specification, the declarative part of a package body can contain subprogram bodies.<br>
+            To create a package body, use the CREATE PACKAGE BODY statement, which you can execute interactively from SQL-Plus
+        </p>
+        <h3>Syntax</h3>
+        <div class="syt">
+            &nbsp;&nbsp;CREATE [OR REPLACE] PACKAGE BODY package_name (IS | AS)<br>&nbsp;&nbsp;procedure_definition; 
+        <br>&nbsp;&nbsp;function_definition;<br> 
+            &nbsp;    private_variable_declaration;<br>  
+            &nbsp;   private_type_definition; <br> 
+            &nbsp;   cursor_definition;<br> 
+         [BEGIN<br> 
+         &nbsp;  executable_statements;<br> 
+         [EXCEPTION<br> 
+         &nbsp;  exception_handlers]]<br> 
+         END [package_namel<br> 
+            
+        </div>
+        <h3>Example</h3>
+        <div class="eg">
+            CREATE OR REPLACE PACKAGE emp is <br>
+            procedure add_name(p_id number,p_name varchar) is <br>
+            BEGIN<br>
+             &nbsp;    dbms_ouput.put_line('Employee Added');<br>
+            END add_name;
+            <br>
+            procedure edit_name(p_id number,p_name varchar) is <br>
+            BEGIN<br>
+            &nbsp;  dbms_ouput.put_line('Employee updated');<br>
+            END edit_name;<br>
+            end ;<br>
+            /
+
+            <br> 
+            Package Created.
+        </div>
+    </div>
+</body>
+</html>

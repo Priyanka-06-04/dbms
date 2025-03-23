@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCL</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+       <h1>COMMIT and ROLLBACK </h1><br>
+        <P>COMMIT and ROLLBACK are performed on transactions. A transaction is the smallest unit of work that is performed against a database. Its a sequence of instructions in a logical order. A transaction can be performed manually by a programmer or it can be triggered using an automated program.</P>
+        <br>
+       <h2>COMMIT</h2> 
+        <p>COMMIT is the SQL command that is used for storing changes performed by a transaction. When a COMMIT command is issued it saves all the changes since last COMMIT or ROLLBACK.</p>
+        <br>
+    
+       <h2>Syntax</h2> 
+       <pre>COMMIT;
+            SET AUTOCOMMIT ON: enable autocommit feature
+            SET AUTOCOMMIT OFF: Is the default and disble automatic commiting
+
+       </pre>  
+    <br>
+        <h1>Rollback</h1>
+        <p>ROLLBACK is the SQL command that is used for reverting changes performed by a transaction. When a ROLLBACK command is issued it reverts all the changes since last COMMIT or ROLLBACK.</p><br>
+        <h2>Syntax</h2> <br>
+       <pre>ROLLBACK;</pre>
+       <p>The following sequence of commands will illustrate the commit and rollback operations:</p>
+       <div class="eg">
+        <p>Step1. SELECT * FROM STUDENT;</p>
+        <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>PARAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        </table>
+        <p>Step2. INSERT INTO DEPT VALUES(5,"MANISHA",32,"MUMBAI);
+            <BR>
+                1 row created.
+        </p>
+        <p>Step3. SELECT * FROM DEPT;</p>
+        <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>PARAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>MANISHA</td>
+            <td>32</td>
+            <td>MUMBAI</td>
+            </tr>
+        </table>
+        <p>Step4. ROLLBACK;</p>
+           Rollback complete.
+        <p>Step5. SELECT * FROM DEPT;</p>
+        <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>PARAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        </table>
+       <p>Step6. UPDATE DEPT SET NAME="RAM" WHERE ROLL_NO=1;
+    <BR>
+          1 row updated.</p>
+          <P>Step7. SELECT * FROM STUDENT;</P>
+          <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>RAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        </table>
+       
+        <p>Step8.COMMIT;<BR>
+        Commit complete.</p>
+        <p>Step9: SELECT * FROM STUDENT</p>
+        <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>PARAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        </table>
+        <p>Step10. ROLLBACK;<BR>
+            Rollback complete</p>
+        <p>Step11: SELECT * FROM STUDENT</p>
+        <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <tr>
+            <td>1</td>
+            <td>PARAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+        </tr> 
+        <tr>
+        <td>4</td>
+        <td>ESHA</td>
+        <td>21</td>
+        <td>DELHI</td>
+        </tr>
+        </table>
+
+    </div>
+</body>
+</html>

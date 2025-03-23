@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCL</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+       <h1> MySQL Grant Privilege</h1><br>
+        MySQL has a feature that provides many control options to the administrators and users on the database,we are going to learn about grant privileges to a user account. MySQL provides GRANT statements to give access rights to a user account.
+        <br>
+       <h2>GRANT Statement</h2> 
+        The grant statement enables system administrators to assign privileges and roles to the MySQL user accounts so that they can use the assigned permission on the database whenever required.
+        <br>
+    
+       <h2>Syntax</h2> 
+        The following are the basic syntax of using the GRANT statement:
+        
+       <pre>GRANT privilege_name(s)   
+        ON object   
+        TO user_account_name; </pre> 
+        <h2>Example</h2> 
+        <div class="eg">
+            (i) SQL>GRANT SELECT ON SCOTT.EMP TO PUNIT;<br>
+            (The above command will grant SELECT permission on EMP table of SCOTT user to user PUNIT)<br>
+            (ii)SQL>GRANT SELECT ON SCOTT.EMP TO PUNIT<br>
+            WITH GRANT OPTION;<br>
+            (The above command will grant SELECT permission on EMP table of SCOTT user to user PUNIT,Here, WITH GRANT OPTION -allows user to PUNIT to grant this permission to other users.)<br>
+            (iii) SQL>GRANT SELECT ON SCOTT.EMP TO PUBLIC;<br>
+            (The above command will grant SELECT permission on EMP table of SCOTT user to everybody)<br>
+        </div>
+    </div>
+</body>
+</html>

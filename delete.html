@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body><div>
+   <h1>SQL DELETE</h1> 
+The SQL DELETE statement is used to delete rows from a table. Generally DELETE statement removes one or more records from a table.
+<br>
+SQL DELETE Syntax<BR>
+Let's see the Syntax for the SQL DELETE statement:
+<pre class="syntax">
+DELETE FROM table_name [WHERE condition]; 
+</pre>
+Here table_name is the table which has to be deleted. The WHERE clause in SQL DELETE statement is optional here.
+<br>
+<br>
+SQL DELETE Example<br>
+<br>
+Let us take a table, named "STUDENT" table.
+<table border="2px">
+    <th>ROLL_NO</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <tr>
+    <td>1</td>
+    <td>ABHIRAM</td>
+    <td>22</td>
+    <td>ALLAHABAD</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>ALKA</td>
+    <td>20</td>
+    <td>GHAZIABAD</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>DISHA</td>
+    <td>21</td>
+    <td>VARANASI</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ESHA</td>
+<td>21</td>
+<td>DELHI</td>
+</tr>
+<TR>
+<TD>5</TD>
+<td>MANMEET</td>
+<TD>23</TD>
+<TD>JALANDHAR</TD>
+</TR>
+<TR>
+<TD>6</TD>
+<TD>PARTEEK</TD>
+<TD>24</TD>
+<TD>KANPUR</TD>
+</TR>
+</table><br>
+<div class="eg">
+    DELETE FROM STUDENT WHERE ROLL_NO=3;
+</div><br>
+<table border="2px">
+    <th>ROLL_NO</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <tr>
+    <td>1</td>
+    <td>ABHIRAM</td>
+    <td>22</td>
+    <td>ALLAHABAD</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>ALKA</td>
+    <td>20</td>
+    <td>GHAZIABAD</td>
+</tr>
+<!-- <tr>
+    <td>3</td>
+    <td>DISHA</td>
+    <td>21</td>
+    <td>VARANASI</td>
+</tr> -->
+<tr>
+<td>4</td>
+<td>ESHA</td>
+<td>21</td>
+<td>DELHI</td>
+</tr>
+<TR>
+<TD>5</TD>
+<td>MANMEET</td>
+<TD>23</TD>
+<TD>JALANDHAR</TD>
+</TR>
+<TR>
+<TD>6</TD>
+<TD>PARTEEK</TD>
+<TD>24</TD>
+<TD>KANPUR</TD>
+</TR>
+</table>
+</div>
+
+</body>
+</html>

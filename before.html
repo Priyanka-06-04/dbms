@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before </title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Before Trigger</h1>
+        <p>
+            When defining a trigger, you can specify the trigger timing. That is, you can specify whether the trigger action is to be executed befure or after the triggering statement. BEFORE and AFTER apply to both statement and row triggers.<br><br>
+BEFORE triggers are commonly used to check the validity of the data before the action is performed. For instance, you can use BEFORE trigger to prevent deletion of row if deletion should not be allowed in the given case.
+<br><br>
+        </p>
+        <h3>Types of BEFORE trigger:</h3>
+        <p>
+            * <b>BEFORE INSERT trigger:</b>BEFORE INSERT trigger: A BEFORE INSERT trigger means that Oracle will fire this trigger before the INSERT operation is executed.</p>
+           <b>Syntax for a BEFORE INSERT trigger is:</b> 
+           <pre class="syt">
+            CREATE or REPLACE TRIGGER trigger_name
+            BEFORE INSERT
+            ON table_name
+            [ FOR EACH ROW ]
+            DECLARE
+            -- variable declarations
+            BEGIN
+            -- trigger code
+            EXCEPTION
+            WHEN ...
+            -- exception handling
+            END;
+            
+           </pre>
+           <b>* Create a trigger for the EMP table, which makes the entry in ENAME column in uppercase.</b>
+           <pre class="eg">Example 1:
+           
+            SQLS CREATE OR REPLACE TRIGGER UPP_TRIG
+            
+            BEFORE INSERT ON EMP
+            
+            FOR EACH ROW
+            
+            BEGIN
+            
+            :new.ENAME := UPPER(:new.ENAME);
+            
+            END;
+            /
+            Trigger created.
+            SQL>
+           </pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCL</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+       <h1>Creating A User </h1><br>
+          <p>The DBA creates the user by executing the CREATE USER statement.the user doesnot have any privilege at this point.The DBA can then grant privileges to that user.These privileges determines what the user can do at the database level.</p>
+        <br>
+       <h2>Syntax</h2> 
+       <pre> 
+        CREATE USER user_name
+        INDENTIFIED BY password;
+       </pre> 
+       <h2>Example</h2> 
+        <pre class="eg">
+            CREATE USER PRIYANKA<br>
+            INDENTIFIED BY PAUL;
+        </pre>
+        <P>Once a user is create, the DBA can grant specific system privileges as well as object privilegeto user. The DBA uses the GRANT command to allocate system and object privilege to the user.</P>
+    </div>
+</body>
+</html>

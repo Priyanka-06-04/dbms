@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>group</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+   <div>
+    <h1>Aggregate Functions</h1>
+    <p>Group functions operate on multiple rows or groups of rows and return one value for the entire group or table. Group functions are also called Aggregate functions, used to produce the summarized results. They operate on sets of rows and return results based on groups of rows. By default all rows in a table are treated as one group.
+        </p>
+        <b>In SQL, Group functions can be categorized as:</b><BR>
+        * COUNT()<BR>
+        * SUM()<BR>
+        * MAX()<BR>
+        * MIN()<BR>
+        * AVG()<BR>
+    <h3>COUNT()</h3>
+    <P>This function returns the number of rows in the table that satisfies the condition specified in the WHERE clause. If the WHERE clause is not specified, then the query returns the total number of rows in the table.<BR><BR>
+    <B>Example: </B>
+    <i>If you want to count the total number of STUDENTS working in a particular department, the query would be like:</i></P>
+    <PRE>SELECT COUNT (*) AS TOTAL_STUDENT FROM STUDENT
+    <BR> WHERE DEPTNO=10;</PRE>
+        <i>OUTPUT:</i>
+        <table border="2px">
+              <Th>
+                TOTAL_STUDENT
+              </Th>
+              <tr>
+              <Td>
+                5
+              </Td></tr>
+        </table>
+        <h3>SUM()</h3>
+        <P>This function is used to get the sum of a numeric column.</P>
+        <B>Example: </B>
+    <i>To get the total marks given out to the students, the query would be like:</i>
+    <pre>
+        SELECT SUM(marks) AS TOTAL_MARKS FROM STUDENT;
+    </pre>
+    <i>OUTPUT:</i>
+        <table border="2px">
+              <Th>
+                TOTAL_MARKS
+              </Th>
+              <tr>
+              <Td>
+                209
+              </Td></tr>
+        </table>
+        <H3>MAX()</H3>
+        <P>This function is used to get the maximum value from a column.
+
+        </P>
+        <B>Example:</B>
+        <i>To get the maximum marks obtained by an student, the query would be like:</i>
+        <pre>
+            SELECT MAX (marks) AS MAXIMUM_MARKS FROM STUDENT;
+        </pre>
+        <i>OUTPUT:</i>
+        <table border="2px">
+              <Th>
+                MAXIMUM_MARKS
+              </Th>
+              <tr>
+              <Td>
+                45
+              </Td></tr>
+        </table>
+        <H3>MIN()</H3>
+        <P>This function is used to get the minimum value from a column.</P>
+        <B>Example:</B>
+        <i>To get the minimum marks obtained by an student, the query would be like:</i>
+        <pre>
+            SELECT MIN(marks) AS MINIMUM_MARKS FROM STUDENT;
+        </pre>
+        <i>OUTPUT:</i>
+        <table border="2px">
+              <Th>
+                MINIMUM_MARKS
+              </Th>
+              <tr>
+              <Td>
+                34
+              </Td></tr>
+        </table>
+        <H3>AVG()</H3>
+        <P>This function is used to get the average value from a column.</P>
+        <B>Example:</B>
+        <i>To get the average marks obtained by an student, the query would be like:</i>
+        <pre>
+            SELECT AVG(marks) AS AVERAGE_MARKS FROM STUDENT;
+        </pre>
+        <i>OUTPUT:</i>
+        <table border="2px">
+              <Th>
+                AVERAGE_MARKS
+              </Th>
+              <tr>
+              <Td>
+                41.8
+              </Td></tr>
+        </table>
+
+   </div> 
+</body>
+</html>

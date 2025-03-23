@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>types</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TYPES OF EXCEPTION</h1>
+        Exceptions can either be of two types:<br>
+1. Predefined Exceptions <br>
+2. User-defined Exceptions
+<h1>PREDEFINED EXCEPTIONS</H1>
+Predefined exceptions are internally defined by runtime system. Predefined exceptions are raised implicitly whenever PL/SQL program violates an ORACLE rule or exceeds a system-dependent limit. Every Oracle error has a number, but exceptions must be handled by name. So, PL/SQL predefines some common ORACLE errors as exceptions.<br>
+For example, if you try to divide a number by zero then PL/SQL raises an exception called ZERO_DIVIDE and if SELECT can not find a record then PL/SQL raises exception VO_DATA_FOUND.<br>
+<h3>Syntax</h3>
+<pre>WHEN [exception-identifier] THEN [actions];
+Where [actions] may be one or more PL/SQL or SQL statements,
+ each terminated by semi-colon.
+</pre>
+<H3>Example:</H3>
+* Following example gives the usage of ZERO_DIVIDE exception:
+<PRE class="eg">
+   
+ DECLARE
+
+N NUMBER;
+ BEGIN
+N:= 10/0;
+EXCEPTION
+WHEN ZERO DIVIDE THEN DBMS_
+OUTPUT -PUT_LINE(Zero Divide Error');
+END ;<BR>
+Zero Divide Error
+PL/SQL procedure successfully completed.
+SQL >
+</PRE>
+    </div>
+</body>
+</html>

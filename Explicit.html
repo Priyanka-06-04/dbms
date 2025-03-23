@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicit</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Explicit Cursor</h1>
+        <p>CURSOR
+            Explicit Cursors are declared explicitly by the user, along with other identifiers to be used in a PL/SQL block. These are also known as user-fined cursors, defined in the DECLARE section of the PL/SOL block. They must be declared when you are executing a SELECT statement that returns more than one row. Even though the cursor stores multiple records, only one record can be processed at a time, which is called as current row.
+        <h3> CURSOR MANIPULATION</h3>
+            Cursor manipulation is done through the<b> DECLARE, OPEN, FETCH and CLOSE </b>statements. These Statements are explained below:<br><br>
+    <b><h3> >> Declaring an Explicit Cursor</h3></b><br>
+            While declaring a cursor, cursor name is given and also defines the structure of the query to be performed within it. The CURSOR statement is used to declare explicit cursor.
+        <h3>Syntax of CURSOR statement is:</h3>
+        <pre class="syt">
+            CURSOR < cursor_name > IS ‹ select_statement >;
+        </pre>
+        <pre class="eg">
+        Declaring a Cursor in the Declaration Section:
+        DECLARE
+        CURSOR C1 IS SELECT * FROM EMP
+        WHERE SAL > 2000;  
+        </pre>In the above example, we are declaring a cursor 'Cl' on a query which returns the records of all the employees with salary greater than 2000. Here 'EMP' is the table which contains records of all the employees.
+ </p>
+ <b> >> Opening an explicit cursor</b>
+ <p>
+    Once the cursor is declared in the declaration section, we can access the cursor in the execution section of the PL/SQL program. The OPEN statement is used to open an explicit cursor.
+    <h3>Syntax of OPEN statement is:</h3>
+        <div class="syt">OPEN ‹cursor_name>; </div><br><br>
+            After opening the cursor, the rows returned by the query are available for fetching.
+            When a cursor is opened, the first row becomes the current row ie. the cursor points to the first row in the active set.<br>
+        <b>Example:</b><br>
+        <pre class="eg">
+            OPEN C1;<br>
+            Now, the cursor 'Cl' will point to the first
+            row in the active set.
+        </pre></p>
+    <b> >> Retrieving Individual row / Fetching Data from the Explicit Cursor</b>
+    <p>After the cursor is opened, the current row is loaded into variables. The current row is the row at which the cursor is currently pointing. The transfer of data into PL/SQL variables is done through FETCH statement.
+    <h3>Syntax of FETCH statement is:</h3>
+           <div class="syt">
+            FETCH < cursor_name> INTO ‹ variables›;
+            OR
+            FETCH < cursor_name> INTO ‹ record_name>;
+             </div><br><br>
+             For each column value returned by the query associated with the cursor, there must be a coresponding variable in the INTO list. Also their data types must be compatibie.<br>
+           <b>Example:</b><br>
+           <pre class="eg">
+            DECLARE
+            ENO EMP. EMPNO%TYPE;
+            NAME EMP. ENAME%TYPE;
+            SALARY EMP. SAL%TYPE;
+            CURSOR C1 IS SELECT EMPNO, ENAME,<br>
+             SAL FROM EMP WHERE SAL > 5000;
+            BEGIN
+            OPEN C1;
+            LOOP
+            FETCH C1 INTO ENO, NAME, SALARY;
+            EXIT WHEN CISNOTFOUND;
+            DEMS_OUTPUT. PUT_LINE<br>
+            (ENO||' '| |NAME||''||SALARY):
+            END LOOP;
+            END;   
+           </PRE>
+          </p>
+          <p><b> >> Closing an explicit cursor</b>
+            <p>
+                Close the cursor after completing the processing of the SELECT statement. This step allows the cursor to be reopened, if required. Therefore, you can establish an active set several times. The CLOSE statement is used to close an explicit cursor.
+               <h3>Syntax of Close statement is:</h3>
+                   <div class="syt">
+                    CLOSE < cursor_name>;
+                     </div><br><br>
+                      
+                   
+               </p>
+          
+
+       
+ 
+    </div>
+</body>
+</html>

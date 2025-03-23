@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width:100%;
+            height: 100vh;
+            background-image: url(dbms2.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 700px 500px;
+        }
+        nav{
+            width:100%;
+            height:100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: sans-serif;
+            color:black;
+        }
+        .menu a{
+            text-decoration: none;
+            color:black;
+            padding: 10px 20px;
+            font-size: 20px;
+            position:relative
+        }
+        .menu a:before{
+            content:'';
+            position:absolute;
+            top:0%;
+            left:0%;
+            width:0%;
+            height:100%;
+            border-bottom: 2px solid rgb(163, 110, 213);
+             transition: 0.4s linear; 
+        }
+        .menu a:hover:before{
+            width:90%;
+        }
+        .topic{
+            max-width: 650px;
+            position:absolute;
+            top:30%;
+            left:60%;
+            text-align:center;
+        }
+        .topic span{
+             letter-spacing:5px ;
+        }
+        .topic h1{
+            font-size: 3em;
+        }
+        .topic a{
+           background: rgb(163, 110, 213);
+           text-decoration:none;
+           font-size:1.5em;
+           padding: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                 SQL|PL/SQL
+            </div>
+            <div class="menu">
+                <a href="HOME.HTML">HOME</a>
+                <a href="ABOUT.HTML">ABOUT</a>
+                <a href="CONTACT.HTML">CONTACT</a>
+            </div>
+        </nav>
+        <section class="topic">
+            <span>DBMS</span>
+            <h1>DATABASE MANAGMENT SYSYTEM</h1>
+            <BR>
+                <a href="homepage.html" >lets start learning</a>
+        </section>
+    </header>
+</body>
+</html>

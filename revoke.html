@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCL</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+       <h1>REVOKE command </h1><br>
+       The REVOKE command in SQL is used to revoke or withdraw permissions that were previously granted to an account on a database object. Therefore, we can think of REVOKE as a tool to limit a role's or user's ability to perform SELECT, INSERT, DELETE, UPDATEand CREATE statements on database objects., as well as to set constraints like foreign keys and update data records, among other operations.
+       <br>
+       The REVOKE command is the opposite of the command GRANT, which allows a user account or role access to the database object.
+        <br>
+       <p>This is the syntax for the writing revoke command</p>
+       <h2>Syntax</h2>  
+       <pre> 
+        REVOKE [ PRIVILEGES ]
+        ON [user_name] .[table_name]
+        FROM [user_name];</pre>  
+        <h2>Example</h2>
+        <div class="eg">
+            (i) SQL>REVOKE SELECT ON SCOTT.EMP TO PUNIT;<br>
+            (The above command will revoke SELECT permission on EMP table of SCOTT user to user PUNIT)<br>
+           (ii) SQL>REVOKE SELECT ON SCOTT.EMP TO PUBLIC;<br>
+            (The above command will revoke SELECT permission on EMP table of SCOTT user to everybody)<br>
+        </div>
+    </div>
+</body>
+</html>

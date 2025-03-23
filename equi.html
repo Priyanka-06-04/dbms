@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>Equi Join</h1>
+        <p>
+            When two tables are joined together using equality of values in one or more columns, they make an Equi join. Table prefixes are utilized to prevent ambiguity and the WHERE clause specifies the columns being joined. It is a simple SQL join condition which uses the equal sign as the comparison operator.
+            <b>Table</b>
+        </p><table border="2px">
+            
+            <th>EMP_NO</th>
+            <th>ENAME</th>
+            <th>DEPTNO</th>
+            <th>DNAME</th>
+            <TR>
+                <TD>101</TD>
+                <TD>SMITH</TD>
+                <TD>CLERK</TD>
+                <TD>20</TD>
+            </TR>
+            <TR>
+                <TD>102</TD>
+                <TD>ALLEN</TD>
+                <TD>SALESMAN</TD>
+                <TD>30</TD>
+            </TR>
+            <TR>
+                <TD>103</TD>
+                <TD>JONES</TD>
+                <TD>MANAGER</TD>
+                <TD>20</TD>
+            </TR>
+            <TR>
+                <TD>104</TD>
+                <TD>MILLER</TD>
+                <TD>CLERK</TD>
+                <TD>10</TD>
+            </TR>
+        </table>
+        
+        <br><br>
+        <b>Dept</b>
+        <table border="2px">
+            
+            <th>DEPT_NO</th>
+            <th>DNAME</th>
+            <th>LOC</th>
+            
+            <TR>
+                <TD>10</TD>
+                <TD>ACCOUNTING</TD>
+                <TD>NEW YORK</TD>
+                
+            </TR>
+            <TR>
+                <TD>20</TD>
+                <TD>RESEARCH</TD>
+                <TD>DALLAS</TD>
+               
+            </TR>
+            <TR>
+                <TD>30</TD>
+                <TD>SALES</TD>
+                <TD>CHICAGO</TD>
+               
+            </TR>
+            <TR>
+                <TD>40</TD>
+                <TD>OPERATIONS</TD>
+                <TD>BOSTON</TD>
+                
+            </TR>
+        </table>
+        <P>To list the employee numbers, names, department numbers and the department name, the query would be like:<BR><BR>
+            SELECT EMPNO, ENAME, EMP. DEPTNO, DNAME FROM EMP, DEPT
+            WHERE EMP. DEPTNO = DEPT. DEPTNO;<BR><BR>
+            Here, the DEPTNO column exists in both the tables. To avoid ambiguity, the column name should be qualified with the table name (or with an alias of table name). Both the table names need to be specified (EMP and DEPT).><BR>
+            The WHERE clause defines the joining condition i.e. joining the DEPINO of EMP table to the DEPTNO of DEPT table. Here, it checks for the equality</P>
+       <BR>
+        <I>The output will be:</I>
+       <br>
+        <table border="2px">
+            
+            <th>EMP_NO</th>
+            <th>ENAME</th>
+            <th>JOB</th>
+            <th>DEPTNO</th>
+            <TR>
+                <TD>104</TD>
+                <TD>MILLER</TD>
+                <TD>10</TD>
+                <TD>ACCOUNTING</TD>
+            </TR>
+            <TR>
+                <TD>105</TD>
+                <TD>KING</TD>
+                <TD>10</TD>
+                <TD>ACCOUNTING</TD>
+            </TR>
+            <TR>
+                <TD>101</TD>
+                <TD>SMITH</TD>
+                <TD>20</TD>
+                <TD>RESEARCH</TD>
+            </TR>
+            <TR>
+                <TD>103</TD>
+                <TD>JONES</TD>
+                <TD>20</TD>
+                <TD>RESEARCH</TD>
+            </TR>
+            <TR>
+                <TD>102</TD>
+                <TD>ALLEN</TD>
+                <TD>30</TD>
+                <TD>SALESMAN</TD>
+            </TR>
+            
+            
+            
+        </table>
+
+    </div>
+</body>
+</html>

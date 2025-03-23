@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create </title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Procedure</h1>
+        <p>
+            You can create a new procedure with the CREATE PROCEDURE statement, which may declare a list of parameters and must define the actions to be performed by the standard PL/SQL block. The CREATE clause enables you to create stand-alone procedures, which are stored in an Oracle database.<br>
+            <b>Syntax</b>
+            <pre class="syt">
+                CREATE [OR REPLACE] PROCEDURE procedure_name
+                   [(Parameter1 [mode 1] datatype1, 
+                     parameter2 [mode2] datatype2,
+                     .....)]
+                    
+                IS/ AS
+                [Local declaration]
+                BEGIN
+                   PL/SQL executable statements
+                [EXCEPTION
+                   Exception handlers]
+                END [PROCEDURE_NAME];
+            </pre>
+            <h3>Example:</h3>
+            <pre class="eg">
+                CREATE DR REPLACE PROCEDURE 
+                PR1(X NUMBER,Y NUMBER) IS
+                S NUMBER;
+                BEGIN
+                S:=X+Y;
+                DBMS_OUTPUT.PUT_LINE('SUM IS : ' ||S);
+                END PR1;
+            
+                Procedure created.
+                
+            </pre>
+        </p>
+    
+    
+</body>
+</html>

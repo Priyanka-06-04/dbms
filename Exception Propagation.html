@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exception Propagation</h1>
+        <p>When an exception is raised in the executable section of PL/SQL block, then it handled in the following manner:
+        <br>  * If the exception is handled in the current block, then the control passes to  enclosing block.</p>
+        <pre class="eg"> 
+        Syntax:
+            <br>
+            BEGIN 
+            STATEMENTS;
+            BEGIN
+            IF CONDITION THEN
+            RAISE A;
+             END IF;
+            EXCEPTION
+            WHEN A THEN
+            STATEMENTS;
+            END;
+            STATEMENTS;
+            EXCEPTION
+            WHEN B THEN
+            STATEMENTS;
+            END;
+            <br>
+        As exception A is handled in the inner block, <br>
+        control resumes with enclosing block.
+               
+        </pre>
+            <p>
+                *If the exception is not handled in the current block, then the exception is propagati That means, the exception is sent to enclosing blocks one after another from inside outside until an error handler is found in one of the enclosing blocks or there are m more blocks to search for handlers.
+            </p>
+            <p>
+                *When an exception is not handled in any of the enclosing blocks then it is sent to host environment.
+            </p>
+            <h3>Example</h3>
+            * The following example explains the usage of User-defined Exception:
+            <pre class="eg">Example:
+                
+                
+            DECLARE
+               
+            MyException EXCEPTION
+            BEGIN
+            IF TO CHAR(SYSDATE, 'DY')= 'SUN' THEN
+                
+            RAISE MyException;
+            END IF;
+            EXCEPTION
+            WHEN MyException THEN
+            DBMS_OUTPUT-PUT_LINE('NO TRASACTION TODAY');
+            END;
+                /
+            NO TRANSACTION TODAY
+            PL/SQL procedure successfully completed.
+            SQL> |
+                
+            </div>
+    </div>
+</body>
+</html>

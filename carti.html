@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>Cartesian Join</h1>
+        <p>
+            If a SQL join condition is omitted or if it is invalid the join operation will result in a Cartesian product. The Cartesian product returns the number of rows equal to the product of all rows in all the tables being joined.
+        </p>
+        <h3>Example:</h3>
+        <div class="eg">
+            SELECT EMPNO,ENAME,DNAME,LOC FROM EMP,DEPT;
+        </div>
+        <I>If numbers of rows are 14 and 4 in EMP and DEPT tables respectively, then the total number of rows produced is 56.<br>
+            Cartesian product is useful in finding out all the possible combination of columns from different tables.</I>
+    </div>
+</body>
+</html>

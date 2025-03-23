@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case Expressions</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Case Expressions</h1>
+        <p>A case Expressions selects a result and return it.To select the result, the case expression uses  a selector,and expression whose value is used to select one of several alternatives.The selector is followed by one or more WHEN clauses, which are clicked sequentailly.The value of the selector determines which clause is executed.If the value of selector equals the values of a WHEN- clause expression WHEN clause is executed.</p>
+        <h3>Syntax:</h3>
+        <pre class="syt">
+            CASE   
+               when search_condition then  result;
+               when search_condition then  result; 
+               when search_condition then  result;
+               when search_condition then  result; 
+               when search_condition then  result;
+               else result;  
+           
+         END;      
+        </pre><br><br>
+        <h3>Example:</h3>
+<pre CLASS="eg">
+ DECLARE  
+    grade char(1) := 'A';  
+ BEGIN  
+ CASE grade 
+when 'A' then dbms_output.put_line('Excellent');  
+when 'B' then dbms_output.put_line('Very good');  
+when 'C' then dbms_output.put_line('Good');  
+when 'D' then dbms_output.put_line('Average');  
+when 'F' then dbms_output.put_line('Passed with Grace');  
+else dbms_output.put_line('Failed'); 
+        
+ END CASE;  
+ END;  <br><br>
+         
+Excellent
+PL/SQL procedure successfully completed. 
+            
+            </pre>
+<i>After the execution of above code, you will get the following result:</i>
+    
+    </div>
+    
+</body>
+</html>

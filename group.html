@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div><h1>SQL group by</h1>
+        In SQL, The Group By statement is used for organizing similar data into groups. The data is further organized with the help of equivalent function. It means, if different rows in a precise column have the same values, it will arrange those rows in a group.
+        <ul><li>The SELECT statement is used with the GROUP BY clause in the SQL query.</li>
+            <li>WHERE clause is placed before the GROUP BY clause in SQL.</li>
+         <li> ORDER BY clause is placed after the GROUP BY clause in SQL.</li></ul>
+         <h3>Syntax</h3>
+         <pre>
+            SELECT column1, function_name(column2)  
+            FROM table_name  
+            WHERE condition  
+            GROUP BY column1, column2  
+            ORDER BY column1, column2;  
+            function_name: Table name.  
+            Condition: which we used.  
+         </pre>
+         <table border="2px">
+            <th>ROLL_NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Marks</th>
+            <tr>
+            <td>1</td>
+            <td>ABHIRAM</td>
+            <td>22</td>
+            <td>ALLAHABAD</td>
+            <td>45</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>ALKA</td>
+            <td>20</td>
+            <td>GHAZIABAD</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>DISHA</td>
+            <td>21</td>
+            <td>VARANASI</td>
+            <td>34</td>
+        </tr>
+<tr>
+<td>4</td>
+<td>ESHA</td>
+<td>21</td>
+<td>DELHI</td>
+<td>45</td>
+</tr>
+<TR>
+<TD>5</TD>
+<td>MANMEET</td>
+<TD>22</TD>
+<TD>JALANDHAR</TD>
+<td>43</td>
+</TR>
+        </table>
+         <div class="eg">
+            if you want to know the total marks held by same age group,the query would be like:<br>
+            <br>
+            SELECT AGE,SUM(MARKS) AS TOTAL_MARKS FROM STUDENT<BR>
+            GROUP BY AGE;<BR>     
+            <TABLE BORDER="2PX">
+                <TH>AGE</TH>
+                <TH>TOTAL_MARKS</TH>
+                <TR>
+                    <TD>20</TD>
+                    <TD>43</TD>
+                </TR>
+                <TR>
+                    <TD>21</TD>
+                    <TD>79</TD>
+                </TR>
+                <TR>
+                    <TD>22</TD>
+                    <TD>88</TD>
+                </TR>
+            </TABLE>    </div>
+    </div>
+</body>
+</html>

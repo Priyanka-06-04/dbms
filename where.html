@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h1>SQL WHERE</h1><br>
+A WHERE clause in SQL is a data manipulation language statement.
+<br><br>
+WHERE clauses are not mandatory clauses of SQL DML statements. But it can be used to limit the number of rows affected by a SQL DML statement or returned by a query.
+<br><br>
+Actually. it filters the records. It returns only those queries which fulfill the specific conditions.
+<br><br>
+WHERE clause is used in SELECT, UPDATE, DELETE statement etc.
+<br>
+Let's see the syntax for sql where:
+<br>
+<pre>
+SELECT column1, column 2, ... column n  
+FROM    table_name  
+WHERE [conditions]  </pre>
+<H3>Example:</H3>
+<div class="eg">
+    <p> SELECT * FROM STUDENT;</p><BR>
+<table border="2px">
+    <th>ROLL_NO</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <tr>
+    <td>1</td>
+    <td>PARAM</td>
+    <td>22</td>
+    <td>ALLAHABAD</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>ALKA</td>
+    <td>20</td>
+    <td>GHAZIABAD</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>DISHA</td>
+    <td>21</td>
+    <td>VARANASI</td>
+</tr> 
+<tr>
+<td>4</td>
+<td>ESHA</td>
+<td>21</td>
+<td>DELHI</td>
+</tr>
+</table>
+<BR>
+<p>UPDATE STUDENT SET CITY="PUNJAB" WHERE ROLL_NO=4;</p><BR>
+<table border="2px">
+    <th>ROLL_NO</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <tr>
+    <td>1</td>
+    <td>PARAM</td>
+    <td>22</td>
+    <td>ALLAHABAD</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>ALKA</td>
+    <td>20</td>
+    <td>GHAZIABAD</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>DISHA</td>
+    <td>21</td>
+    <td>VARANASI</td>
+</tr> 
+<tr>
+<td>4</td>
+<td>ESHA</td>
+<td>21</td>
+<td>PUNJAB</td>
+</tr>
+</table>
+
+    </div>
+</body>
+</html>

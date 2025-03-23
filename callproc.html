@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calling a Procedure</h1>
+        <p>
+            A procedure is called as a PL/SQL statement. A procedure can be called from any
+            PL/SQL program by giving its names followed by the parameters.
+        </p>
+        <h3>Example:</h3>
+        To call the procedure 'PRI', following statement will be written in a PL/SQL program:
+            PRI (10, 20) ;
+        <pre class="eg"> 
+            SQL> BEGIN
+             PR1(10,28);
+            END;
+            SUM IS : 38<br>
+            PL/SQL procedure successfully completed.
+        </pre>
+        <br>
+        <pre class="eg">SQL> DECLARE
+            N1 NUMBER:=10;
+            N2 NUMBER:=20;
+            BEGIN
+            PR1(N1, N2) ;
+            END;
+            SUM IS : 30
+           <br>
+        PL/SQL procedure successfully completed.
+            
+        </pre>
+    </div>
+</body>
+</html>

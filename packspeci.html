@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specification</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Package Specification</h1>
+        <p>
+            The package specification is required when you create a new package. The package specification lists all the objects which are publicly accessible from other applications. It declares the types, variables, constants, exceptions, cursors, and subprograms (procedure or function). The scope of these declarations is local to your database schema and global to the package. So, the declared objects are accessible from your application and from anywhere in the package.<br><br>
+            To create a package or package specification, use the CREATE PACKAGE statement, which you can execute interactively from SQL*Plus.
+        </p>
+        <h3>Syntax</h3>
+        <div class="syt">
+        CREATE [OR REPLACE] PACKAGE package_name (IS | AS)<br>
+        procedure_specification;<br>
+        function_specification; <br>
+        variable_declaration; <br>
+        type_definition;<br>
+        exception-declaration;<br>
+        cursur-declaration;<br>
+        END [package_name];<br>
+        </div>
+        <h3>Example:</h3>
+        <div class="eg">
+            CREATE OR REPLACE PACKAGE emp is <br>
+            procedure add_name(p_id number,p_name varchar);<br>
+            procedure edit_name(p_id number,p_name varchar);<br>
+            end emp;
+            /
+            <br>
+            <br> 
+            Package Created.
+        </div>
+    </div>
+</body>
+</html>

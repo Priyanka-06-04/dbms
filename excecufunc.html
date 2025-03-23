@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Function Execution</h1>
+        <p>
+            A function may accept one or many parameters, but must return a single value. You invoke functions as part of PL/SQL expressions, using variables to hold the returned value.
+        </p>
+        <h3>Example:</h3>
+        <pre class="eg">
+            SQL> DECLARE
+            N1 NUMBER:=10;
+            N2 NUMBER:=20;
+            $ NUMBER;
+            BEGIN
+            S:=FUNC1 (N1, N2) ;
+            DBMS_OUTPUT-PUT_LINE('RESULT IS: 'TIS);
+            END;
+            /
+            RESULT IS: 30
+
+            PL/SQL procedure successfully completed.
+
+            SQL> 
+
+        </pre>
+    </div>
+</body>
+</html>
